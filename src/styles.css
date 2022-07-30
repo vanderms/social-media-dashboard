@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  [data-theme="light"] {
+    --clr-neutral-50: #fff;
+    --clr-neutral-100: #f7f9ff;
+    --clr-neutral-200: #f1f3fa;
+    --clr-neutral-300: #e1e4f0;
+    --clr-neutral-500: #63687d;
+    --clr-neutral-800: #1d1f29;
+    --clr-facebook: #178ff5;
+    --clr-twitter: #1da1f2;
+    --clr-instagram: linear-gradient(
+      225deg,
+      #df4896 0%,
+      #ee877e 50.91%,
+      #fdc366 100%
+    );
+    --clr-youtube: #c4032b;
+    --clr-danger: #dc414c;
+    --clr-success: #1eb589;
+  }
+
+  [data-theme="dark"] {
+    --clr-neutral-50: #1d1f29;
+    --clr-neutral-100: #20222f;
+    --clr-neutral-200: #252b42;
+    --clr-neutral-300: #333a55;
+    --clr-neutral-500: #8c98c6;
+    --clr-neutral-800: #ffffff;
+    --clr-facebook: #178ff5;
+    --clr-twitter: #1da1f2;
+    --clr-instagram: linear-gradient(
+      225deg,
+      #df4896 0%,
+      #ee877e 50.91%,
+      #fdc366 100%
+    );
+    --clr-youtube: #c4032b;
+    --clr-danger: #dc414c;
+    --clr-success: #1eb589;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto;
+    max-width: 94%;
+  }
+
+  @media screen(sm) {
+    .container {
+      max-width: 87.2%;
+    }
+  }
+
+  @media screen(md) {
+    .container {
+      max-width: min(48rem, 87.2%);
+    }
+  }
+
+  @media screen(xl) {
+    .container {
+      max-width: 69.375rem;
+    }
+  }
+}
+
+@layer components {
+  .mask-image {
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+
+  .mask-icon-facebook {
+    @apply mask-image;
+    mask-image: url("/assets/images/icon-facebook.svg");
+  }
+  .mask-icon-instagram {
+    @apply mask-image;
+    mask-image: url("/assets/images/icon-instagram.svg");
+  }
+  .mask-icon-twitter {
+    @apply mask-image;
+    mask-image: url("/assets/images/icon-twitter.svg");
+  }
+  .mask-icon-youtube {
+    @apply mask-image;
+    mask-image: url("/assets/images/icon-youtube.svg");
+  }
+}

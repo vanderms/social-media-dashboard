@@ -1,0 +1,18 @@
+<section aria-labelledby="header-section__title"
+  class="container pt-9 flex flex-col xl:flex-row items-center justify-between ">
+  <header>
+    <h1
+      class='text-2xl text-neutral-800 font-bold xl:text-[1.75rem] xl:leading-[2.125rem]'>
+      Social Media Dashboard</h1>
+    <p class="text-sm text-neutral-500 mt-1 font-bold xl:mt-0">Total Followers: 23,004</p>
+  </header>
+  <div
+    class="mt-6 pt-4 border-t border-neutral-300 flex justify-between items-center xl:mt-0 xl:pt-0 xl:border-none xl:w-[8.5rem]">
+    <p class="text-sm text-neutral-500 font-bold">Dark Mode</p>
+    <button aria-label="toggle theme" (click)="onClick()"
+      class="relative bg-button-gradient w-12 h-6 rounded-full flex items-center">
+      <span class="absolute bg-neutral-50 h-5 w-5 rounded-full transition-all"
+        [ngClass]="isDark() ? 'left-1' : 'left-6'"></span>
+    </button>
+  </div>
+</section>

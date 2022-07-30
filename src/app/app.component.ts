@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { Theme } from './models/theme';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'social-media-dashboard';
+  theme: Theme = Theme.dark;
+
+  toggleTheme() {
+    this.theme = this.theme === Theme.light ? Theme.dark : Theme.light;
+  }
 }
