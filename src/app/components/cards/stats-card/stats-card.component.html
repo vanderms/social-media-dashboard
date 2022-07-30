@@ -1,0 +1,27 @@
+<article [attr.data-social-media]="socialMedia"
+  class="max-w-[20.375rem] w-full pb-6 rounded-md bg-neutral-200 hover:bg-neutral-300 overflow-hidden flex flex-col items-center">
+  <div class="w-full h-1 [background:var(--clr-brand)]"></div>
+  <header class="flex items-center gap-2 mt-7 justify-center">
+    <span class="mask-icon"></span>
+    <span class="text-[0.75rem] leading-[0.9375rem] text-neutral-500 font-bold">{{
+      username }}</span>
+  </header>
+  <p class="mt-7 flex flex-col items-center gap-[0.5625rem]">
+    <strong class="w-max text-[3.5rem] leading-[3rem] text-neutral-800">{{
+      followers }}</strong>
+    <span
+      class="block w-max text-[0.75rem] leading-[0.9375rem] tracking-[0.3125rem] text-neutral-500">
+      {{ socialMedia ===
+      'youtube' ? 'SUBSCRIBERS' :
+      "FOLLOWERS" }}
+    </span>
+  </p>
+  <p class='flex gap-1 items-center mt-[1.5625rem]  text-[0.75rem] leading-[0.9375rem] font-bold'
+    [ngClass]="statsToday >= 0? 'text-success': 'text-danger'">
+    <img
+      [src]="statsToday >= 0 ? '/assets/images/icon-up.svg' : '/assets/images/icon-down.svg'"
+      alt="" />
+    <span>{{Math.abs(statsToday)}}</span>
+    <span>Today</span>
+  </p>
+</article>

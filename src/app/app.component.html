@@ -1,3 +1,5 @@
-<main [attr.data-theme]="theme.toLowerCase()" class="bg-neutral-50">
+<main [attr.data-theme]="theme.toLowerCase()" class="relative bg-neutral-50">
+  <div class="absolute top-0 left-0 w-full h-[14.6875rem] bg-neutral-100 rounded-b-[1.25rem]"></div>
   <app-header-section [theme]="theme" (toggleTheme)="toggleTheme()"></app-header-section>
+  <app-stats-section></app-stats-section>
 </main>

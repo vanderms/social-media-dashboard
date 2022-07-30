@@ -50,6 +50,26 @@
     --clr-danger: #dc414c;
     --clr-success: #1eb589;
   }
+
+  [data-social-media="facebook"] {
+    --clr-brand: var(--clr-facebook);
+    --icon: url("/assets/images/icon-facebook.svg");
+  }
+
+  [data-social-media="twitter"] {
+    --clr-brand: var(--clr-twitter);
+    --icon: url("/assets/images/icon-twitter.svg");
+  }
+
+  [data-social-media="instagram"] {
+    --clr-brand: var(--clr-instagram);
+    --icon: url("/assets/images/icon-instagram.svg");
+  }
+
+  [data-social-media="youtube"] {
+    --clr-brand: var(--clr-youtube);
+    --icon: url("/assets/images/icon-youtube.svg");
+  }
 }
 
 @layer components {
@@ -78,26 +98,12 @@
 }
 
 @layer components {
-  .mask-image {
+  .mask-icon {
+    @apply block h-5 w-5;
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
-  }
-
-  .mask-icon-facebook {
-    @apply mask-image;
-    mask-image: url("/assets/images/icon-facebook.svg");
-  }
-  .mask-icon-instagram {
-    @apply mask-image;
-    mask-image: url("/assets/images/icon-instagram.svg");
-  }
-  .mask-icon-twitter {
-    @apply mask-image;
-    mask-image: url("/assets/images/icon-twitter.svg");
-  }
-  .mask-icon-youtube {
-    @apply mask-image;
-    mask-image: url("/assets/images/icon-youtube.svg");
+    mask-image: var(--icon);
+    background: var(--clr-brand);
   }
 }

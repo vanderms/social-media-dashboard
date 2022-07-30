@@ -21,7 +21,9 @@ module.exports = {
       "clr-twitter": "var(--clr-twitter)",
       "clr-youtube": "var(--clr-youtube)",
       "danger": "var(--clr-danger)",
-      "success": "var(--clr-success)"
+      "success": "var(--clr-success)",
+      "brand": "var(--clr-brand)",
+      "transparent": "transparent"
     },
     extend: {
       backgroundImage: {
