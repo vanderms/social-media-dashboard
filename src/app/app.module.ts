@@ -5,9 +5,11 @@ import { HeaderSectionComponent } from './components/sections/header/header.comp
 import { AppComponent } from './app.component';
 import { StatsSectionComponent } from './components/sections/stats/stats.component';
 import { StatsCardComponent } from './components/cards/stats-card/stats-card.component';
+import { OverviewComponent } from './components/sections/overview/overview.component';
+import { OverviewCardComponent } from './components/cards/overview-card/overview-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderSectionComponent, StatsSectionComponent, StatsCardComponent],
+  declarations: [AppComponent, HeaderSectionComponent, StatsSectionComponent, StatsCardComponent, OverviewComponent, OverviewCardComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],

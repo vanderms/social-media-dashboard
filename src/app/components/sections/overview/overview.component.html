@@ -1,0 +1,48 @@
+<section aria-labelledby="section-overview__title" class="mt-[2.875rem]">
+  <div class="container">
+    <h2 id="section-overview__title" class="overview-title">Overview - Today</h2>
+
+    <ul
+      class="mt-6 grid grid-cols-1 justify-items-center  gap-x-[1.875rem] gap-y-6 md:grid-cols-2 xl:grid-cols-4 xl:justify-between">
+      <li class=" contents">
+        <app-overview-card class="contents" socialMedia="facebook" title="Page views"
+          stats="87" [variation]="3"></app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="facebook" title="Likes"
+          stats="52" [variation]="-2">
+        </app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="instagram" title="Likes"
+          stats="5462" [variation]="2257">
+        </app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="instagram" title="Profile Views"
+          stats="52k" [variation]="1375">
+        </app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="twitter" title="Retweets"
+          stats="117" [variation]="303">
+        </app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="twitter" title="Likes"
+          stats="107" [variation]="-19">
+        </app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="youtube" title="Likes"
+          stats="107" [variation]="-19">
+        </app-overview-card>
+      </li>
+      <li class="contents">
+        <app-overview-card class="contents" socialMedia="youtube" title="Total Views"
+          stats="1407" [variation]="-12">
+        </app-overview-card>
+      </li>
+    </ul>
+  </div>
+</section>
